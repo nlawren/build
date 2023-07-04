@@ -1,6 +1,7 @@
-- hosts: "*"
+- name: Reboot a server or group of servers
+  hosts: "*"
   become: true
   tasks:
-    - name: Reboot a slow machine that might have lots of updates to apply
-      reboot:
+    - name: Reboot a slow machine that may have a lot of updates to apply
+      ansible.builtin.reboot:
         reboot_timeout: 3600
