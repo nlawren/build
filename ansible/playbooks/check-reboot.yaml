@@ -2,9 +2,10 @@
   hosts: all
   tasks:
     - name: Check that the reboot-required exists
-      stat:
+      ansible.builtin.stat:
         path: /var/run/reboot-required
       register: p
-    - debug:
+    - name: Print reboot required message if needed
+      ansible.builtin.debug:
         msg: "Reboot required"
       when: p.stat.exists
