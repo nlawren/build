@@ -1,7 +1,8 @@
-- hosts: "ubuntu"
+- name: Perform an apt update and upgrade
+  Hosts: "ubuntu"
   become: true
   tasks:
-    - name: apt
-      apt:
+    - name: apt update and upgrade
+      ansible.builtin.apt:
         update_cache: true
         upgrade: 'yes'
