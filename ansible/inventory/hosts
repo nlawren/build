@@ -1,10 +1,15 @@
-[ubuntu]
+[kubernetes]
 k3s-master1.lan
 k3s-master2.lan
 k3s-master3.lan
 k3s-worker1.lan
 k3s-worker2.lan
-[apt-servers]
+[apt]
+k3s-master1.lan
+k3s-master2.lan
+k3s-master3.lan
+k3s-worker1.lan
+k3s-worker2.lan
 antwerp.lan
 piholeb.lan
 pihole.lan
