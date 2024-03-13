@@ -25,3 +25,6 @@ k3s-worker2.lan
 antwerp.lan
 pve.lan
 dacquoise.lan
+[debian]
+piholeb.lan
+caddy.lan
