@@ -4,7 +4,7 @@
   tasks:
     - name: Set timezone
       ansible.builtin.command:
-        cmd: timedatectl set-timezone America/Chicago
+        cmd: timedatectl set-timezone Australia/Sydney
 
     - name: Make sure timesyncd is stopped
       ansible.builtin.systemd:
@@ -15,6 +15,7 @@
       ansible.builtin.template:
         src: ../templates/timesyncd.conf
         dest: /etc/systemd/timesyncd.conf
+        mode: '644'
 
     - name: Make sure timesyncd is started
       ansible.builtin.systemd:

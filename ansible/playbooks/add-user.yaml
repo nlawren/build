@@ -17,7 +17,7 @@
       ansible.builtin.file:
         path: "/home/serveradmin/.ssh"
         state: directory
-        mode: 0700
+        mode: '700'
         owner: serveradmin
         group: serveradmin
     - name: Copy the public ssh keyfile
@@ -26,4 +26,4 @@
         dest: "/home/serveradmin/.ssh/authorized_keys"
         owner: serveradmin
         group: serveradmin
-        mode: 0600 
+        mode: '600'
