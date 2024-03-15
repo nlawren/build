@@ -5,6 +5,8 @@
     - name: Set timezone
       ansible.builtin.command:
         cmd: timedatectl set-timezone Australia/Sydney
+      register: time_output
+      changed_when: time_output.rc != 0
 
     - name: Make sure timesyncd is stopped
       ansible.builtin.systemd:
@@ -13,7 +15,7 @@
 
     - name: Copy over the timesyncd config
       ansible.builtin.template:
-        src: ../templates/timesyncd.conf
+        src: timesyncd.conf
         dest: /etc/systemd/timesyncd.conf
         mode: '644'
 

@@ -22,7 +22,7 @@
         group: serveradmin
     - name: Copy the public ssh keyfile
       ansible.builtin.template:
-        src: ../templates/authorized_keys
+        src: authorized_keys
         dest: "/home/serveradmin/.ssh/authorized_keys"
         owner: serveradmin
         group: serveradmin
