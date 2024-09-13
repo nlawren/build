@@ -13,12 +13,12 @@ antwerp.lan
 piholeb.lan
 pihole.lan
 [all]
-caddy.lan
-piholeb.lan
-pihole.lan
 antwerp.lan
-pve.lan
+caddy.lan
 dacquoise.lan
+pihole.lan
+piholeb.lan
+pve.lan
 [debian]
 piholeb.lan
 caddy.lan
