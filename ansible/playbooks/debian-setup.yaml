@@ -1,20 +1,21 @@
 - name: Update, upgrade and install base packages
   hosts: "debian"
   tasks:
-    - name: update the cache
+    - name: Update the cache
       ansible.builtin.apt:
-        update_cache: yes
+        update_cache: true
         name: "*"
         state: latest
+        only_upgrade: "true"
     - name: Install base build packages
       ansible.builtin.apt:
         pkg:
-        - build-essential
-        - tree
-        - sudo
-        - vim
-        - samba
-        - smbclient
-        - chrony
+          - build-essential
+          - tree
+          - sudo
+          - vim
+          - samba
+          - smbclient
+          - chrony
         state: present
       become: true
