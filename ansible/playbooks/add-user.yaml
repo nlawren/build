@@ -1,5 +1,5 @@
 - name: Add the serveradmin user to a server
-  hosts: "debian"
+  hosts: "build_debian"
   become: true
   vars_files:
     - user-data.yaml
@@ -7,14 +7,13 @@
     - name: Add the serveradmin user
       ansible.builtin.user:
         name: serveradmin
-        uid: 1000
         groups: adm, sudo, plugdev, netdev
         append: true
         state: present
         createhome: true
         shell: /bin/bash
         home: /home/serveradmin
-        password: {{ secret_user_password }}
+        password: "{{ secret_user_password }}"
     - name: Add .ssh directory
       ansible.builtin.file:
         path: "/home/serveradmin/.ssh"

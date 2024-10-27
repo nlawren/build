@@ -7,6 +7,7 @@ k3s-worker2.lan
 [apt]
 antwerp.lan
 caddy.lan
+orac.lan
 pihole.lan
 piholeb.lan
 [pihole]
@@ -16,9 +17,12 @@ piholeb.lan
 antwerp.lan
 caddy.lan
 dacquoise.lan
+orac.lan
 pihole.lan
 piholeb.lan
 pve.lan
 [debian]
 caddy.lan
 piholeb.lan
+[build_debian]
+orac.lan
