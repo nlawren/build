@@ -1,5 +1,5 @@
 - name: Perform an apt update and upgrade
-  hosts: "ubuntu"
+  hosts: "all"
   become: true
   tasks:
     - name: APT update and upgrade

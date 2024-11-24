@@ -1,5 +1,5 @@
 - name: Add the serveradmin user to a server
-  hosts: "build_debian"
+  hosts: "all"
   become: true
   vars_files:
     - user-data.yaml

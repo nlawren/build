@@ -1,4 +1,4 @@
-- name: Update, upgrade and install base packages
+- name: Update apt and install base packages
   hosts: "build_debian"
   tasks:
     - name: Update the cache
@@ -9,12 +9,16 @@
         pkg:
           - build-essential
           - curl
-          - tree
-          - sudo
-          - vim
+          - e2fsprogs
+          - htop
           - samba
+          - smartmontools
           - smbclient
           - software-properties-common
-          - chrony
+          - ssh-import-id
+          - sudo
+          - tmux
+          - tree
+          - vim
         state: present
       become: true
