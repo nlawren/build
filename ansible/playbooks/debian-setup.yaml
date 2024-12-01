@@ -10,6 +10,7 @@
           - build-essential
           - curl
           - e2fsprogs
+          - git
           - htop
           - samba
           - smartmontools
