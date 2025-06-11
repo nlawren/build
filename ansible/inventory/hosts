@@ -33,4 +33,7 @@ piholeb.lan
 vault.lan
 
 [build_debian]
-vault.lan
+
+[build_ubuntu]
+soletaken.lan
+

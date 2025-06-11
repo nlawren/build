@@ -7,7 +7,7 @@
     - name: Add the serveradmin user
       ansible.builtin.user:
         name: serveradmin
-        groups: adm, sudo, plugdev, netdev
+        groups: adm, sudo, plugdev
         append: true
         state: present
         createhome: true
