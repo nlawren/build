@@ -1,3 +1,3 @@
-# Lab notes on Cilium
+# Cilium
 
-Various configuration files and examples on deploying Cilium on both Kind and Talos linux.
+Note - these files have moved to the Learning Labs/Kubernetes repo.
